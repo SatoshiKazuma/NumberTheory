@@ -24,8 +24,12 @@ int hcf(int a,int b){
         return b;
     return hcf(b%a,a);
 }
+int lcm(int a, int b){
+    return ((a*b)/hcf(a,b));
+}
 int main(){
-    int a= 4, b =7;
-    cout<<hcf(a,b);
+    int a= 50, b =51;
+    cout<<hcf(a,b)<<endl;
+    cout<<lcm(a,b)<<endl;
     return 0;
 }
